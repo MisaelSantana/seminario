@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Perguntas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+      <!-- <h3>Lista de Mercados</h3>
+      <hr>
+      <form action="">
+        <label for="">Insira seu endereço!</label>
+        <input 
+          type="text" 
+          placeholder="Título" 
+          class="form-control">
+        <label for="">Insira sua lista de compras!</label>
+        <textarea 
+          name="" 
+          id="" 
+          cols="30" 
+          rows="10" 
+          class="form-control">
+        </textarea>
+        <button 
+          class="btn btn-primary mt-3">Enviar lista de compras
+        </button>
+      </form>
+       -->
+      <form action="/salvarpergunta" method="POST">
+        <label for="">Insira seu endereço!</label>
+        <input 
+          type="text"
+          name="titulo" 
+          placeholder="Título" 
+          class="form-control">
+        <label for="">Insira sua lista de compras!</label>
+        <textarea 
+          name="descricao" 
+          id="" 
+          cols="30" 
+          rows="10" 
+          class="form-control">
+        </textarea>
+        <button 
+          class="btn btn-primary mt-3">Enviar lista de compras
+        </button>
+      </form>
+    </div>
+</body>
+</html>

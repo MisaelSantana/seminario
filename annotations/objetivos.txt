@@ -1,0 +1,12 @@
+##Supermercados
+
+-> rota.get/
+(interface exibindo os itens do supermercado)
+
+-> rota.get/id
+(exibindo as informações do produto que o usuário clicou)
+
+-> rota.get/usuario
+(exibir as informações do usuario logado)
+
+-> rota.get/administradores/mercado
