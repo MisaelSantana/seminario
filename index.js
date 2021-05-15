@@ -8,16 +8,29 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Configuração das rotas do website
 app.get('/', (req, res) => {
-  res.send('Em desenvolvimento...');
+    res.render('Listar todos os itens do mercado');
 });
 
-app.get('/id', (req, res) => {
-    res.send('Vizualizar mais');
-  });
+app.get('/cereais', (req, res) => {
+    res.send('Cereais');
+});
 
-app.get('/usuario', (req, res) => {
-    res.send('Pagina de acesso do usuário');
+app.get('/graos', (req, res) => {
+    res.send('Grãos');
+});
+
+app.get('/produtos-limpeza', (req, res) => {
+    res.send('Produtos de Limpeza');
+});
+
+app.get('/acougue', (req, res) => {
+    res.send('Açougue');
+});
+
+app.get('/padaria', (req, res) => {
+    res.send('Padaria');
 });
 
 app.get('/mercado', (req, res) => {
@@ -36,7 +49,7 @@ app.get('/mercado', (req, res) => {
   res.render('mercado', {listMercado});
 });
 
-app.post('/salvarpedido', (req, res) => {
+app.post('/realizar-pedido', (req, res) => {
   let topic = {
     title: req.params.titulo,
     message: req.params.message,
@@ -55,4 +68,11 @@ app.post('/salvarpedido', (req, res) => {
 //     console.log(error);
 //   });
 
-app.listen(8080, () => console.log('Supermarket is running: http://localhost:8080'));
+// Configuração do server
+app.listen(9000, (erro) => {
+  if(erro) {
+    console.log(erro, 'Ops, erro de servidor na porta 9000');
+  } else {
+    console.log('Servidor rodando : https//localhost:9000');
+  }
+});
