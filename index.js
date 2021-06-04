@@ -9,28 +9,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Configuração das rotas do website
-app.get('/', (req, res) => {
-    res.render('Listar todos os itens do mercado');
-});
-
-app.get('/cereais', (req, res) => {
-    res.send('Cereais');
-});
-
-app.get('/graos', (req, res) => {
-    res.send('Grãos');
-});
-
-app.get('/produtos-limpeza', (req, res) => {
-    res.send('Produtos de Limpeza');
-});
-
-app.get('/acougue', (req, res) => {
-    res.send('Açougue');
-});
-
-app.get('/padaria', (req, res) => {
-    res.send('Padaria');
+app.get('/login', (req, res) => {
+    res.render('login');
 });
 
 app.get('/mercado', (req, res) => {
@@ -69,10 +49,10 @@ app.post('/realizar-pedido', (req, res) => {
 //   });
 
 // Configuração do server
-app.listen(9000, (erro) => {
+app.listen(8080, (erro) => {
   if(erro) {
-    console.log(erro, 'Ops, erro de servidor na porta 9000');
+    console.log(erro, 'Ops, erro de servidor na porta 8080');
   } else {
-    console.log('Servidor rodando : https//localhost:9000');
+    console.log('Servidor rodando : https//localhost:8080');
   }
 });
