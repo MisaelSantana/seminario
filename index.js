@@ -13,6 +13,10 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
+app.get('/home', (req, res) => {
+  res.render('home');
+})
+
 app.get('/mercado', (req, res) => {
   const listMercado = [{
     id: 1,
